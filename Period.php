@@ -34,7 +34,6 @@ class Period {
     if($this->getValideDateFormat($first)) {
       $first = $this->getValideDateFormat($first);
       $parts = explode("-", trim($first));
-      echo $first;
       $this->firstDay = date($this->format, mktime(0,0,0,$parts[1], $parts[2], $parts[0]));
     } else {
       $this->firstDay = null;
